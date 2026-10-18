@@ -1,0 +1,11 @@
+{
+  "name": "circuitmate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hardware idea or parts photo in; parts list, pin-by-pin wiring, Arduino/MicroPython code and safety tips out. Google Gemma 4 (open-weight, multimodal).",
+  "keywords": ["arduino", "esp32", "raspberry-pi-pico", "micropython", "hardware", "maker", "gemma", "gemma-4", "hacktoberfest"],
+  "scripts": { "dev": "node server.js" },
+  "engines": { "node": ">=18" },
+  "author": "Ayush Yadav",
+  "license": "MIT"
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CircuitMate · From idea to wired-up Arduino in minutes</title>
+<meta name="description" content="Describe a hardware idea or snap your parts. Google Gemma 4 gives a parts list, pin-by-pin wiring, working Arduino / MicroPython code and safety tips.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔌</text></svg>">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="logo">🔌</div>CircuitMate</div>
+    <span class="pill">Hardware & Dev Ecosystem · Gemma 4 vision</span>
+  </header>
+  <section class="hero">
+    <h1>Got an Arduino kit and an idea? Let's wire it.</h1>
+    <p>Tell CircuitMate what you want to build, or snap a photo of the parts on your desk. Gemma 4 identifies the components and returns a parts list with Indian prices, a pin-by-pin wiring table, complete Arduino or MicroPython code, test steps and safety notes. It can also spot mistakes in a photo of your breadboard.</p>
+  </section>
+  <div class="grid">
+    <div class="card">
+      <h2>Your project</h2>
+      <label for="idea">What do you want to build?</label>
+      <textarea id="idea" style="min-height:90px;font-family:inherit;font-size:14px" placeholder="A parking sensor that beeps faster as a car gets closer"></textarea>
+      <div class="row">
+        <div style="flex:1;min-width:150px"><label for="board">Board</label><select id="board"><option>Arduino Uno</option><option>Arduino Nano</option><option>ESP32</option><option>ESP8266 (NodeMCU)</option><option>Raspberry Pi Pico</option><option>Raspberry Pi Pico W</option></select></div>
+        <div style="flex:1;min-width:130px"><label for="level">Level</label><select id="level"><option>beginner</option><option>intermediate</option><option>advanced</option></select></div>
+      </div>
+      <label for="parts">Parts you already have (optional)</label>
+      <input type="text" id="parts" placeholder="HC-SR04, buzzer, 3 LEDs, 220Ω resistors, breadboard">
+      <label>Photo of parts or breadboard (optional)</label>
+      <div class="drop" id="drop" tabindex="0" role="button" aria-label="Upload photo">
+        <div id="preview"></div><div id="dropText">📷 Tap to add a photo · Gemma 4 will identify parts</div>
+        <input type="file" id="file" accept="image/*" capture="environment" hidden>
+      </div>
+      <div class="row" style="margin-top:16px">
+        <button id="go">Plan my circuit</button>
+        <button class="ghost" id="sample" type="button">Try a sample</button>
+      </div>
+      <div id="error"></div>
+    </div>
+    <div class="card" id="out"><div class="empty">Parts, wiring, code and test steps appear here.</div></div>
+  </div>
+  <footer>CircuitMate is an open-source MIT project by Ayush Yadav · Double-check wiring before powering on · Built at MLH Hacktoberfest Hack Day Prayagraj 3.0</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
